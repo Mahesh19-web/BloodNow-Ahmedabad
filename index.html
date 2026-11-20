@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#b91c1c">
+  <meta name="description" content="Connect blood donors and urgent blood requests in Ahmedabad.">
+  <title>BloodNow Ahmedabad | Find Blood. Save Lives.</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="#top" aria-label="BloodNow Ahmedabad home"><span class="drop" aria-hidden="true">♥</span><span>BloodNow <small>AHMEDABAD</small></span></a>
+    <label class="sr-only" for="lang">Language</label>
+    <select id="lang" aria-label="Language"><option value="en">English</option><option value="hi">हिन्दी</option><option value="gu">ગુજરાતી</option></select>
+  </header>
+  <main id="top">
+    <section class="hero">
+      <div class="pill">AHMEDABAD EMERGENCY DONOR NETWORK</div>
+      <h1 id="heroTitle">Every minute matters.<br><em>Be someone's lifeline.</em></h1>
+      <p id="heroSub">Connect people who need blood with willing donors in Ahmedabad.</p>
+      <div class="actions"><button class="primary" id="requestBtn">🩸 Request Blood</button><button class="outline" id="donorBtn">＋ Become a Donor</button></div>
+      <div class="note">⚠️ This community prototype stores information only in this browser; it does not notify other people. For urgent needs, contact your hospital blood bank or emergency services. Confirm all availability and compatibility with qualified professionals.</div>
+    </section>
+    <section class="stats" aria-label="Service details"><div><strong>8</strong><span>Blood groups</span></div><div><strong>24×7</strong><span>Request access</span></div><div><strong>Ahmedabad</strong><span>City focus</span></div></section>
+    <section class="panel" id="formPanel" hidden><div class="panelHead"><h2 id="formTitle"></h2><button class="close" id="closeForm" aria-label="Close form">✕</button></div><form id="mainForm"></form></section>
+    <section class="section" id="donorsSection">
+      <div class="requestHead"><div><h2 id="donorsTitle">Find donors</h2><p class="sectionIntro" id="donorsIntro">Filter registered donors by blood group, area, and—when they have opted in—GPS distance.</p></div><span class="demoTag">DEMO / LOCAL ONLY</span></div>
+      <div class="filters">
+        <label><span id="filterGroupLabel">Blood group</span><select id="filterGroup"><option value="">All groups</option></select></label>
+        <label><span id="filterAreaLabel">Area</span><select id="filterArea"><option value="">All areas</option></select></label>
+        <label><span id="filterDistanceLabel">Within distance</span><select id="filterDistance"><option value="">Any distance</option><option value="5">5 km</option><option value="10">10 km</option><option value="25">25 km</option><option value="50">50 km</option></select></label>
+        <button class="secondary" id="locateBtn" type="button">📍 Use my location</button>
+      </div>
+      <p id="locationStatus" class="status" role="status" aria-live="polite"></p>
+      <div id="donors" class="requests"></div>
+    </section>
+    <section class="section"><h2 id="howTitle">How it works</h2><div class="steps"><article><b>01</b><h3 id="step1Title">Share a need</h3><p id="step1Text">Enter blood group, units, hospital and contact number.</p></article><article><b>02</b><h3 id="step2Title">Find a donor</h3><p id="step2Text">Filter registered donors by blood group, Ahmedabad area and opted-in distance.</p></article><article><b>03</b><h3 id="step3Title">Confirm safely</h3><p id="step3Text">Hospital staff confirm availability, testing and compatibility.</p></article></div></section>
+    <section class="section"><h2 id="areasTitle">Ahmedabad areas</h2><div class="areas" id="areas"></div></section>
+    <section class="section" id="requestsSection"><div class="requestHead"><h2 id="requestsTitle">Urgent requests</h2><span class="demoTag">DEMO / LOCAL ONLY</span></div><div id="requests" class="requests"></div></section>
+  </main>
+  <footer><strong>BloodNow Ahmedabad</strong><p>Community donor connection prototype · Not a blood bank or medical service.</p><p>In an emergency, contact your hospital and local emergency services immediately.</p></footer>
+  <script src="app.js"></script>
+</body>
+</html>
